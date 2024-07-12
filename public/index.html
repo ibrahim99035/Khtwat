@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoe Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <img src="images/logo.png" alt="khtwat logo" id="logo">
+    <h1>Khtwat - خطوات</h1>
+    <form id="shoe-form" enctype="multipart/form-data">
+      <input type="hidden" id="shoe-id">
+      <input type="text" id="name" placeholder="Name" required>
+      <select id="category" required></select>
+      <input type="number" id="quantity" placeholder="Quantity" required>
+      <input type="number" id="price" placeholder="Price" step="0.01" required>
+      <label for="image" class="custom-file-upload" id="file-label">
+        <i class="fa fa-cloud-upload-alt"></i> Choose Image
+      </label>
+      <input type="file" id="image" style="display:none;">
+      <input type="hidden" id="image-url">      
+      <input type="color" id="color" value="#0c3c3c">
+      <button type="submit">Add/Update Shoe</button>
+    </form>
+    <table id="shoes-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Sold</th>
+            <th>Color</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>      
+  </div>
+  <div id="image-popup" class="popup">
+    <img id="popup-img" src="" alt="Image">
+  </div>
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
